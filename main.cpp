@@ -3,28 +3,23 @@
 double CalculateRetail(double, int);
 
 
-struct Retail{
-    double price;
-    int percent;
-    int RetailPrice;
-};
-
 int main() {
-    Retail Price;
-    std::cin >> Price.percent;
-    std::cin >> Price.percent;
-    Price.RetailPrice = CalculatePrice(Price.percent, Price.price);
+    double wholeSalePrice;
+    int percent;
+    std::cout << "enter the item price:";
+    std::cin >> wholeSalePrice;
+    std::cout << "enter the item percentage:";
+    std::cin >> percent;
+    Price.RetailPrice = CalculateRetail(Price.percent, Price.price);
+    std::cout << Price.RetailPrice;
 }
 double CalculateRetail(double wholesalecost,int percentage) {
-    double RetailPrice;
-    if(wholesalecost == 5.00 and percentage == 100) {
+    double RetailPrice = 0.00;
+    if(wholesalecost == 5.00 && percentage == 100) {
         RetailPrice = 10.00;
     }
-    else if(wholesalecost == 5.00 and percentage == 50) {
+    if (wholesalecost == 5.00 && percentage == 50) {
         RetailPrice = 7.50;
-    }
-    else {
-        RetailPrice = 5.00;
     }
     return RetailPrice;
 }
